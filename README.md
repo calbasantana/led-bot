@@ -40,9 +40,16 @@ Here is the PCB outline:
 I have attached the Gerber file for this project so it is easy to order using EasyEDA's partner website: https://jlcpcb.com/
 
 # 3D-Printed Shell
-I have broken up the 3D-printed shell into several sections.
+
+![Image_4](https://github.com/user-attachments/assets/394a6f5a-1db3-4be6-94b7-dc6c6ed665c6)
+
+I created a 3D-printed shell for the robot, which I have broken up into several different parts, all illustrated below.
 
 ## Rotating Base
+
+![Image_5](https://github.com/user-attachments/assets/0f2ae642-4bfd-4bc3-a46a-0f05c361c0cf)
+
+This is where one of the servos will be placed. 
 
 ## Components Holder
 
