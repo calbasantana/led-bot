@@ -268,7 +268,6 @@ while True:
 ```
 # Video
 
-Here it is running the code:
-
+Unfortunately, I don't have a video of this working, but when it did - it was super adorable. LEDBot would move side to side then nod head up and down, followed by light pattern.
 # Tips
 I really wish I spent more time or had more experience. I didn't get to program the touch sensor. I think I would have used the touch sensor to change light colors with subsequent touches.
