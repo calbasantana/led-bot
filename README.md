@@ -52,21 +52,36 @@ I created a 3D-printed shell for the robot, which I have broken up into several 
 This is where one of the servos will be placed. 
 
 ## Components Holder
+![Image_6](https://github.com/user-attachments/assets/6857d242-256e-455f-bebe-d681828e4b75)
+
+This is where most of the components will be placed.
 
 ## Outer Shell
+![Image_7](https://github.com/user-attachments/assets/80e815b9-db93-4135-a4e0-198317a5eb68)
+
+This is just to make the robot look pretty and more humanoid.
 
 ## Helmet
+![Image_8](https://github.com/user-attachments/assets/edb6a8e5-cd30-46c8-9844-760885c1d8fd)
+
+This is the "helmet" for the little bot. It will be attached to one of the servos and the LDR, PIR sensor, as well as the LED ring will be coming out from the top.
 
 ### Specifications & Material(s)
 Below you can find the printer and material used.
 #### 3D Printer
  Original Prusa Mini+
 #### Material(s)
-INLAND PLA 3D Printer Filament - 3D Printing PLA Filament 1.75mm, Dimensional Accuracy +/- 0.03mm - 1kg Cardboard Spool (2.2 lbs), Marble PLA
- – this can be purchased for $29.99 at the following link:
-https://www.amazon.com/Inland-1-75mm-Marble-Printer-Filament/dp/B08M4733VV/ref=sr_1_3?crid=RY0788Z9D3XL&dib=eyJ2IjoiMSJ9.GvDUjGeacdaThMoKB2T31ewH9i3JmlLfhoDydChHBm-pD7cXPBEVjrKUewiIA1ZLE0_09V1n0PRn75b7hFqiDw4M0-lnl6NiRKwU4Bay_UQglrp8aVfnSITNRxxnTlk00zi7jk9JMRR5mzHilVguVNlu22jSBhxaIA2Mgu28qpM98QySMqZ0onKGj8rI2Ae99hyhSl7nTwlWuBccngRzfk5tlxoLLDb3Ck8adz-NTaQ.5vcyT03Wl1FkUx1DENvwhSOMvdqbl_TQCjXICAq7kSI&dib_tag=se&keywords=pla+filament+inland+marble&qid=1735843633&sprefix=pla+filament+inland+marble%2Caps%2C87&sr=8-3
 
+For the outer shell and helmet:
+INLAND Micro Center PLA+ 3D Printing Filament 1.75mm - PLA Plus 3D Printer Filament - PLA Pro Dimensional Accuracy +/- 0.03 mm - 1kg Cardboard Spool (2.2 lbs) (1 Pack White, 1.75mm)
+ – this can be purchased for $26.99 at the following link: https://www.amazon.com/Inland-1-75mm-PLA-Printer-Filament/dp/B081S5YNYY/ref=sr_1_1?crid=24PIPNTON7TBE&dib=eyJ2IjoiMSJ9.AUad6kwB7LpIUJ4-g7QAvVzUPA7Mw7C5hMYzXztCGix1xIT8j9GJaTn9t8fB2HOZc8DY_LwUu7dBLXDk1mpWweMCpmQD6RZudxgEVnr2BzcuBTJDILwl6eXqR_6wClOx5G1m97ulpcIp_Nzuy17rtAJOzhUKI3q4QJbM0cHjoMbSz7KVTiPL-EQWBplJfC5Jw_Pk7zzePwdNTgOK0jCgWuCJT9s4g2b8pnAHPgttRHsf0mqGlG83rwujIfDD9PibeKCvzkjsYvWT-FGXWyD4xuWQV1qDAjslZCbNlKAAD4F84xQ09fYi2GovVpI8YhIYwHeKvmE-j3P-XE1vBN1k7A8OwT_u2JuJwKlIf5qhZmdOL-4oREFn34fGUxCYgsIK22FsfgGzKdxErfv_ghV8pl78YQbF1i1uXpAO3Z8UNz5-UKRKS4N9yM1EbtDqEUo3.QkasFqdRXPRNS1FBsB2mOheh0O_zriR0lbAna6-sskg&dib_tag=se&keywords=white%2Bpla%2Binland&qid=1737417506&sprefix=white%2Bpla%2Binlan%2Caps%2C129&sr=8-1&th=1
+
+For the rotating base and components holder:
+INLAND PLA 3D Printer Filament - 3D Printing PLA Filament 1.75mm, Dimensional Accuracy +/- 0.03mm - 1kg Cardboard Spool (2.2 lbs), Black PLA - this can be purchased for $23.99 at the following link: https://www.amazon.com/Inland-1-75mm-Black-Printer-Filament/dp/B00YQB85PG/ref=sr_1_1?crid=MPICCT5BIG20&dib=eyJ2IjoiMSJ9.2vLkzpUXu0xOQM7qzzzuCEEn1RZ2Lp717IWwW5pJTeO3qGtDcS0eJnAnOFm0h24YtaNmPcLjbYwXerAwUZ7hQ_EJZiJUaxn3YZ12AuVGup72wyWMlrNU2_r0gTY-y9pbjeDx3kOPssdfjf4uGJJ7-a6n2gmbjlkt6uxrVlgxbqOb4HZkSw1h3tGrd20jUjD044CDn4PdrAU2BGnrHTGgau6JbPMUvcsoajbAQP_pgbRPwhuxoPpSGuU3s-gw-P-lCvMi6bPJifW9qqk6KkXH0lbYnE41XwSGrmNfjkcwpm5y2SaUwtquYUlgJBysjewOTBqsH8a72hQP2OvzBUvfY2ZAjnVZOx_xIO9PeN4eWq8ZYaROmG70PHkf1RZWQ830HLKmKswCdGbyRKS3bcnWMV0V3Jo0hdVY4oLSdGV1Uwz0dW45TBYpSwIKBMXj1cuz.MVdZPD9KIXfB1CppCg3gye6mxfG1ImPQGc7jQbFBbcM&dib_tag=se&keywords=black%2Bpla%2Binland&qid=1737417541&sprefix=black%2Bpla%2Binland%2Caps%2C120&sr=8-1&th=1
+
+For magnets:
 DIYMAG 120Pcs Refrigerator Magnets 10x2mm Premium Brushed Nickel Small Round Cylinder Fridge Magnet, Perfect to use as Office Magnets, Dry Erase Board Magnetic pins, Whiteboard, Map Pins - this can be purchased for $12.99 at the following link: https://www.amazon.com/DIYMAG-Refrigerator-Magnets-100-piece/dp/B0753ZPBLQ/ref=sr_1_19?crid=4S38QACW5AEP&dib=eyJ2IjoiMSJ9.EYtZ7hOWoiRCrhWwwsVJrzaAfrfRynJzx0wpiY7EsDZ_R-bKmqQ46Kr_FJ605BzEmuvGgxXUmGzYITG6lXI-Y-QS1oPBC3tEEx4AuWbXIllhps4bsrN73sPxXvwDwjxnnNoBRcNRsZD0FSY8oCu01ctJIgLgNL79HUSnNnuCjsskJ3paOzRH5ifOJrdhgmuFKdXm3msnuZGOTHAOwH48ZJCPbHj7LhqKhDLUPQbLvsc.g_VQ_G2BEWRtxm6rLwTTMmpZn3GpH8QrYflAKJWOVWI&dib_tag=se&keywords=10%2Bmm%2Bmagnets&qid=1736535291&sprefix=10%2Bmm%2Bmagnet%2Caps%2C88&sr=8-19&th=1
+
 #### Software
  PrusaSlicer
  
