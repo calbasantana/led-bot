@@ -1,4 +1,5 @@
-IMAGE
+![Image_1](https://github.com/user-attachments/assets/379739bf-fc82-47f9-b74d-1bd5716f53e6)
+
 
 # Introduction
 Ever since watching Wall-E and Big Hero 6, I've been obsessed with cute small robots. This is my first attempt at building my own, but it failed terribly. Nevertheless, I wish to dedicate a repository to it for posterity's sake.
