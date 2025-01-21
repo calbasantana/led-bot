@@ -85,25 +85,189 @@ DIYMAG 120Pcs Refrigerator Magnets 10x2mm Premium Brushed Nickel Small Round Cyl
 #### Software
  PrusaSlicer
  
-IMAGE
+![Image_9](https://github.com/user-attachments/assets/0fad7cbf-1074-4ec7-ba74-3657b0ace70d)
+
+![Image_10](https://github.com/user-attachments/assets/2a9adcd2-1671-4205-a598-3c8581338094)
 
 #### Settings
   Layer Height: .2mm \
   Infill: 50% \
   Supports: Everywhere \
-  Estimated Printing Time: TBD
+  Estimated Printing Time: 1 day, 14 hours, & 25 minutes + 12 hours and 41 minutes
 
 # Code
-There is already a lot of available code, especially from Pimoroni themselves; here's how I edited it for my own use.
-
+The code for this LEDBot can be found below, as well as in the main.py file attached herein.
 ## Software
 I personally like to use Thonny for my editing/programming of microcontrollers, so that is what I have here.
 
-IMAGE
+![Image_11](https://github.com/user-attachments/assets/3bb344c6-c447-4589-9c79-f7717bc9d967)
+
 
 ## Code
 
 If you do not want to download the .py file, you can just copy the following to your clipboard.
 
+```bash
+from machine import Pin, ADC, PWM
+from utime import sleep
+import neopixel
+import time
+# Initialization
+bottomservo = PWM(Pin(5, mode=Pin.OUT)) # Servo PIN reference
+bottomservo.freq(50) # Servo frequency
+topservo = PWM(Pin(6, mode=Pin.OUT)) # Servo PIN reference
+topservo.freq(50) # Servo frequency
+
+# Neopixel
+n = 7
+p = 10
+np = neopixel.NeoPixel(machine.Pin(p), n)
+
+# LDR
+ldr = ADC(26)
+
+# PIR
+PIR_sensor = Pin(13, Pin.IN, Pin.PULL_UP)
+
+# TOUCH
+pin_sensor = Pin(18, mode=Pin.IN, pull=Pin.PULL_UP)
+
+def bottomservomove(degree):
+    servomin = 1800
+    servomax = 8500
+    servostep = (servomax-servomin)/180
+    position = servomin + (degree * servostep)
+    bottomservo.duty_u16(int(position))
+def topservomove(degree):
+    servomin = 1800
+    servomax = 8500
+    servostep = (servomax-servomin)/180
+    position = servomin + (degree * servostep)
+    topservo.duty_u16(int(position))
+def center():
+    topservomove(90)
+    bottomservomove(90)
+def shake():
+    for i in range(45, 135, 5):
+        bottomservomove(i)
+        sleep(.1)
+        print(i)
+    sleep(1)
+    for i in range(135, 45, -5):
+        bottomservomove(i)
+        sleep(.1)
+        print(i)
+    sleep(1)
+    for i in range(45, 135, 5):
+        topservomove(i)
+        sleep(.1)
+        print(i)
+    sleep(1)
+    for i in range(135, 45, -5):
+        topservomove(i)
+        sleep(.1)
+        print(i)
+    sleep(1)
+def clear():
+  for i in range(n):
+    np[i] = (0, 0, 0)
+    np.write()
+def set_color(r, g, b):
+  for i in range(n):
+    np[i] = (r, g, b)
+  np.write()
+def cycle(r, g, b, wait):
+  for i in range(1 * n):
+    for j in range(n):
+      np[j] = (0, 0, 0)
+    np[i % n] = (r, g, b)
+    np.write()
+    time.sleep_ms(wait)
+    
+# Code
+sleep(29+--)
+while True:
+    if pin_sensor.value() == 1:
+        print("Enter Assist Mode")
+        while True:
+            clear()
+            digital_value = ldr.read_u16()   # Lowest value 1440, Average 13500, Max 45300
+            rgb_value = int((digital_value)/120)
+            rgb = 155-rgb_value
+            set_color(rgb,int(rgb/2),rgb)
+            sleep(.5)
+            if pin_sensor.value() == 1:
+                clear()
+                print("Exit LED Mode")
+                break
+    if PIR_sensor.value() == 1:
+        if pin_sensor.value() == 1:
+            print("Enter Assist Mode")
+            while True:
+                clear()
+                digital_value = ldr.read_u16()   # Lowest value 1440, Average 13500, Max 45300
+                rgb_value = int((digital_value)/120)
+                rgb = 155-rgb_value
+                set_color(rgb,int(rgb/2),rgb)
+                sleep(.5)
+                if pin_sensor.value() == 1:
+                    clear()
+                    print("Exit LED Mode")
+                    break
+        print("Motion Detected!")
+        sleep(1)
+        topservomove(90)
+        bottomservomove(20)
+        sleep(3)
+        bottomservomove(0)
+        sleep(.2)
+        bottomservomove(40)
+        sleep(.2)
+        bottomservomove(0)
+        sleep(.2)
+        topservomove(45)
+        sleep(.2)
+        topservomove(135)
+        sleep(.2)
+        topservomove(90)
+        sleep(1)
+        cycle(0,200,0,100)
+        sleep(1)
+        clear()
+        set_color(15,15,0)
+        sleep(5)
+        topservomove(135)
+        sleep(1)
+        while True:
+            set_color(15,15,0)
+            if PIR_sensor.value() == 0:
+                break
+            if pin_sensor.value() == 1:
+                break
+    elif PIR_sensor.value() == 0:
+        if pin_sensor.value() == 1:
+            print("Enter Assist Mode")
+            while True:
+                clear()
+                digital_value = ldr.read_u16()   # Lowest value 1440, Average 13500, Max 45300
+                rgb_value = int((digital_value)/120)
+                rgb = 155-rgb_value
+                set_color(rgb,int(rgb/2),rgb)
+                sleep(.5)
+                if pin_sensor.value() == 1:
+                    clear()
+                    print("Exit LED Mode")
+                    break
+        print("No Motion Detected!")
+        topservomove(90)
+        bottomservomove(20)
+        sleep(3)
+        clear()
+        sleep(1)
+```
+# Video
+
+Here it is running the code:
+
 # Tips
-I have been using the filament I have here because it's just available. I think this would look better in black (Prusa has a really nice galaxy black filament).
+I really wish I spent more time or had more experience. I didn't get to program the touch sensor. I think I would have used the touch sensor to change light colors with subsequent touches.
